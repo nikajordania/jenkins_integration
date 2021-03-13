@@ -4,7 +4,7 @@ def ResponseMessage = messageExchange.response.responseContent
 def jsonSlurper = new JsonSlurper().parseText(ResponseMessage)
 
 def count = jsonSlurper.books.publish_date.size()
-log.info "Count of found publish_dates: " + count
+log.info "Count of found publish dates: " + count
 
 for (int i = 0;i&lt;count;i++) {
 	log.info "Iteration: " + i
