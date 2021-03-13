@@ -8,6 +8,6 @@ log.info "Count of found publish dates: " + count
 
 for (int i = 0;i&lt;count;i++) {
 	log.info "Iteration: " + i
-	assert jsonSlurper.books[i].publish_date.class == Integer
+	assert jsonSlurper.books[i].publish_date.class == String
 }
 </scriptText></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="44ce5c0f-d3dd-4196-a4f2-95f421e5dc25" name="JsonPath RegEx Match"><con:configuration><path>$.books[1].website</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>^((https|http|ftp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$</regEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
